@@ -1,0 +1,137 @@
+💡 Full Prompt: Modern Modular Website in Next.js 15
+
+⸻
+
+🚀 Project Setup & Stack
+
+Use this tech stack:
+	•	Next.js 14 using the App Router (/app directory) architecture
+	•	Tailwind CSS for atomic utility-first styling
+	•	shadcn/ui for headless, themeable UI components
+	•	Framer Motion for all animations (hover, scroll, dropdown, page transitions)
+	•	TypeScript for static typing
+	•	Lucide-react or Heroicons for iconography
+	•	Tailwind variants plugin for custom states if needed (@tailwind-variants/core)
+	•	PostCSS nesting or Tailwind’s native nesting if custom styles are used
+
+⸻
+
+📄 Homepage Design Requirements
+
+1. Sticky Navigation Header (Mega Menu)
+	•	Use shadcn/ui’s DropdownMenu or HoverCard for a mega menu dropdown
+	•	Header should be:
+	•	Sticky at top with backdrop-blur, semi-transparent
+	•	Responsive: full menu on desktop, hamburger drawer (Sheet) on mobile
+	•	Include:
+	•	Popular States
+	•	Major Markets
+	•	Quick Access (Phone, 24/7, Delivery, etc.)
+	•	CTA: “Get Custom Quote” & “View Solutions”
+	•	Use Framer Motion to animate the dropdown:
+	•	Slide down + fade in on hover
+	•	Slight delay on menu items for polished effect
+
+⸻
+
+2. Hero Section
+	•	Full-width section with:
+	•	Bold headline (e.g., “Building Solutions Available for Rent, Sale & Lease”)
+	•	Subtext in smaller font
+	•	Background: Gradient (from-blue-600 to-indigo-800) or image-overlay
+	•	Two CTA buttons:
+	•	Primary: “Get Custom Quote”
+	•	Secondary: “View Solutions”
+	•	Animate with Framer Motion (scale on hover, fade in on load)
+
+⸻
+
+3. Solutions Grid
+	•	Use a responsive 3-column grid (grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3)
+	•	Each card includes:
+	•	Icon (Office, Classroom, Restroom)
+	•	Title, Subtitle
+	•	“Learn More →” with hover underline animation
+	•	Hover: Lift up with shadow (hover:scale-105, hover:shadow-xl)
+	•	Use motion.div for scroll reveal (fade-in from bottom)
+
+⸻
+
+4. Quote Buttons
+	•	Style quote buttons with:
+	•	Gradient backgrounds (from-orange-400 to-yellow-500)
+	•	Glow on hover (hover:shadow-glow or custom shadow)
+	•	Animate with Framer Motion: hover pulse or ripple
+
+⸻
+
+🎨 Styling & Design Principles
+
+Apply a modern design language:
+	•	Rounded corners (rounded-xl, rounded-2xl)
+	•	Clean sans-serif typography (font-sans, text-gray-800)
+	•	Use plenty of white space
+	•	Subtle animations (transition-all duration-300 ease-in-out)
+	•	Consistent color palette (e.g., blue, gray, white, accent orange/yellow)
+
+⸻
+
+🧩 Optional Enhancements
+
+Include these as additional features:
+
+✅ Dark Mode
+	•	Use Tailwind’s dark mode toggle with data-theme="dark"
+	•	Add a theme switcher using shadcn/ui’s Switch or custom toggle
+
+📱 Mobile Enhancements
+	•	Hamburger menu turns into Sheet or Dialog using shadcn/ui
+	•	Mobile-first breakpoints: prioritize single-column and quick CTAs
+
+🎬 Animations
+	•	Framer Motion:
+	•	Scroll-based animations for sections
+	•	Animate presence for modals/menu
+	•	Staggered load animation on homepage cards
+
+🔍 SEO & Accessibility
+	•	Use Next.js Metadata API (metadata.ts)
+	•	Add OG tags, Twitter cards
+	•	Use semantic HTML (<header>, <main>, <section>)
+	•	Ensure keyboard accessibility in all dropdowns and buttons
+
+🛠️ Performance & Optimization
+	•	Lazy load heavy components with dynamic imports
+	•	Use next/image for optimized images
+	•	Add LCP/FCP Web Vitals tracking via next/script
+
+🔁 Reusable Components
+	•	Use a component structure like:
+
+/components
+  ├── Header.tsx
+  ├── HeroSection.tsx
+  ├── SolutionsGrid.tsx
+  ├── QuoteButton.tsx
+  ├── MegaMenu.tsx
+  ├── Footer.tsx
+
+
+⸻
+
+🧪 Future-Proofing Ideas
+	•	Add blog or resource center using app/(blog)/[slug]/page.tsx
+	•	Include testimonial slider or client logos with auto-scroll
+	•	Add CMS support (Sanity, Contentlayer, or static MDX content)
+	•	Enable internationalization via next-intl
+
+⸻
+
+✅ Example Output Expectation
+
+The final output should feel like a modern SaaS website with:
+	•	Interactive and elegant user experience
+	•	High-performance frontend
+	•	Smooth animations
+	•	Easy navigation with mobile support
+	•	Clean, minimal, and bold visuals
